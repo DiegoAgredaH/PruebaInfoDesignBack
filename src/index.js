@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 4000;
+const { PORT } = require("./config");
 const morgan = require("morgan");
 const { mysqlConn } = require("./database-MySQL");
 
@@ -12,6 +12,6 @@ app.use(express.json());
 app.use(require("./routes/routes"));
 
 //Iniciar servidor
-app.listen(port, "0.0.0.0", function () {
-    console.log(`Servidor en puerto ${port}`);
+app.listen(PORT, "0.0.0.0", function () {
+    console.log(`Servidor en puerto ${PORT}`);
 });
