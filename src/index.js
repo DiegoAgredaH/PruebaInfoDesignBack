@@ -12,6 +12,6 @@ app.use(express.json());
 app.use(require("./routes/routes"));
 
 //Iniciar servidor
-app.listen(port, "0.0.0.0", () => {
-  console.log(`Servidor en puerto ${port}`);
+app.listen(port, "0.0.0.0", function () {
+    console.log(`Servidor en puerto ${port}`);
 });
